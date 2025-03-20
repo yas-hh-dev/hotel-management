@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>payment-page</title>
+        <style>
+        body{
+               font-family: 'avant garde','lucida grande';
+               margin: 0;
+            padding: 0;
+            background-color: #ffedc8;
+            text-align: center;
+            }
+             /* Header Styles */
+        header {
+            background-color: #5a3300e5;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin-left: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 23px;
+        }
+        .container {
+            width: 60%;
+            height: 500px;
+            margin: auto;
+            background: rgb(255, 240, 206);
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: 0px 0px 10px rgba(65, 65, 65, 0.55);
+            margin-top: 50px;
+        }
+        input, select, button {
+            width: 80%;
+            padding: 10px;
+            margin: 17px ;
+            border-radius: 15px;
+            border: 1px solid #ccc;
+            color: black;
+            font-weight: 500;
+        }
+        button {
+            background-color: #643500;
+            color: white;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.1s;
+            transition: ease-in;
+            box-shadow: 0px 0px 10px rgba(65, 65, 65, 0.55);
+        }
+        button:hover {
+            background-color: #7a4100;
+            transform: scale(1.01);
+        }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>
+                Shopeasy
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="about us.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+         </header>
+        <div class="container">
+            <h2>Complete Your Payment</h2>
+    
+            <label for="payment-method">Select Payment Method:</label>
+            <select id="payment-method" onchange="togglePaymentFields()">
+                <option value="card">Credit/Debit Card</option>
+                <option value="upi">UPI</option>
+                <option value="paypal">PayPal</option>
+            </select>
+    
+            <!-- Card Payment Fields -->
+            <div id="card-fields">
+                <input type="text" placeholder="Card Number" maxlength="16">
+                <input type="text" placeholder="Cardholder Name">
+                <input type="text" placeholder="MM/YY" maxlength="5">
+                <input type="password" placeholder="CVV" maxlength="3">
+            </div>
+    
+            <!-- UPI Payment Fields -->
+            <div id="upi-fields" style="display: none;">
+                <input type="text" placeholder="Enter UPI ID">
+            </div>
+    
+            <!-- PayPal Payment Fields -->
+            <div id="paypal-fields" style="display: none;">
+                <input type="email" placeholder="Enter PayPal Email">
+            </div>
+    
+            <button onclick="processPayment()">Pay Now</button>
+        </div>
+    
+        <script>
+            function togglePaymentFields() {
+                let method = document.getElementById("payment-method").value;
+                document.getElementById("card-fields").style.display = (method === "card") ? "block" : "none";
+                document.getElementById("upi-fields").style.display = (method === "upi") ? "block" : "none";
+                document.getElementById("paypal-fields").style.display = (method === "paypal") ? "block" : "none";
+            }
+    
+            function processPayment() {
+                alert("Payment processing... (Demo Only)");
+            }
+        </script>
+    
+    </body>
+</html>

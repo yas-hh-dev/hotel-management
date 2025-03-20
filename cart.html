@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" width="device-width,initial-scale=1.0">
+        <title>
+            Shopping-cart
+        </title>
+        <style>
+ body {
+            font-family: 'avant garde','lucida grande';
+               margin: 0;
+            padding: 0;
+            background-color: #ffedc8;
+            text-align: center;
+        }
+        header {
+            background-color: #5a3300e5;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin-left: 20px;
+        }
+        .header{
+            color: #5a3300e5;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 23px;
+        }
+
+        nav ul li a:hover {
+         
+           text-shadow: 0px 0px 9px rgb(138, 120, 98);
+        }
+
+        .cart-container {
+            max-width: 800px;
+            margin: auto;
+            margin-top: 90px;
+            background:  #fff3da;
+            padding: 20px;
+            box-shadow: 2px 1px 12px rgba(0, 0, 0, 0.413);
+            border-radius: 8px;
+            max-height: 600px;
+        }
+       
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+        .cart-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+        .item-details {
+            flex: 1;
+            margin-left: 15px;
+        }
+        .item-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .item-price {
+            color: #a75728;
+            font-weight: bold;
+        }
+        .quantity {
+            display: flex;
+            align-items: center;
+        }
+        .quantity button {
+            background:  #704700;;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 8px;
+            margin: 0 5px;
+            transition: 0.01ms;
+        }
+        .quantity:hover{
+            transform: scale(1.1);
+        }
+        .remove-btn {
+            background: #a75728;
+            color: white;
+            border: none;
+            padding: 7px 10px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 8px;
+            border-radius: 10px;
+            transition: 0.01ms;
+        }
+        .remove-btn:hover{
+            transform: scale(1.1);
+        }
+
+        .cart-total {
+            text-align: right;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .checkout-btn {
+            width: 100%;
+            background:  #704700;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 15px;
+            margin-top: 10px;
+            transition: 0.01s;
+        }
+        .checkout-btn:hover {
+            background: #6e3700;
+            transform: scale(1.01);
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>
+                Shopeasy
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="about us.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+         </header>
+         <div class="big-container">
+        <div class="cart-container">
+            <h2>Shopping-cart</h2>
+            <div class="cart-item">
+                <img src="headphone.jpeg.webp">
+                <div class="item-details">
+                    <p class="item-name">Wireless Headphones</p>
+                    <p class="item-price">₹3,499</p>
+                </div>
+                <div class="quantity">
+                    <button>-</button>
+                    <p>1</p>
+                    <button>+</button>
+                </div>
+                <button class="remove-btn">Remove</button>
+            </div>
+    
+            <div class="cart-item">
+                <img src="smartwatch.png.avif" alt="Product">
+                <div class="item-details">
+                    <p class="item-name">Smart Watch</p>
+                    <p class="item-price">₹5999</p>
+                </div>
+                <div class="quantity">
+                    <button>-</button>
+                    <p>1</p>
+                    <button>+</button>
+                </div>
+                <button class="remove-btn">Remove</button>
+            </div>
+            <div class="cart-item">
+                <img src="mouse.webp" alt="Product">
+                <div class="item-details">
+                    <p class="item-name">Gaming-mouse</p>
+                    <p class="item-price">₹1999</p>
+                </div>
+                <div class="quantity">
+                    <button>-</button>
+                    <p>1</p>
+                    <button>+</button>
+                </div>
+                <button class="remove-btn">Remove</button>
+            </div>
+            <p class="cart-total">Total: ₹11,497 </p>
+            <button class="checkout-btn"><a href="payment.html">Proceed to Checkout</a></button>
+    
+        </div>
+    </div>
+    </body>
+</html>

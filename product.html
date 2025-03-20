@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - E-Commerce</title>
+    <style>
+        /* Basic Page Styling */
+          /* general styles */
+          body{
+               font-family: 'avant garde','lucida grande';
+               margin: 0;
+            padding: 0;
+            background-color: #ffedc8;
+            text-align: center;
+            }
+             /* Header Styles */
+        header {
+            background-color: #5a3300e5;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin-left: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 23px;
+        }
+        .text {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+        
+      img{
+        opacity: 0.95;
+        width: 970px;
+        height: 590px;
+      }
+      .bigimg{
+        background-color: rgb(255, 246, 226);
+        box-shadow: 0px 0px 10px rgba(105, 105, 105, 0.885);
+        padding: 20px;
+      }
+      
+
+        nav ul li a:hover {
+         
+           text-shadow: 0px 0px 9px rgb(138, 120, 98);
+        }
+
+        /* Product Container */
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        /* Product Card */
+        .product-card {
+            background-color: rgb(255, 254, 236);
+            width: 250px;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-left: 90px;
+            transition: 0.5s;
+            
+        }
+        .product-card:hover{
+            transform: scale(1.06);
+        }
+
+        /* Product Image */
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Product Name */
+        .product-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        /* Product Price */
+        .product-price {
+            font-size: 16px;
+            color: rgb(94, 53, 0);
+            margin-bottom: 10px;
+        }
+
+        /* Buy Button */
+        .buy-btn {
+            display: inline-block;
+            padding: 10px;
+            background-color: rgb(94, 53, 0);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.5s;
+        }
+
+        .buy-btn:hover {
+            background-color: rgb(119, 83, 36);
+            transform: scale(1.09);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- navigation bar-->
+    <header>
+        <h1>
+            Shopeasy
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="about us.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+     </header>
+     <div class="bigimg">
+        <img src="flex.jpg">
+        <div class="text"><h1> Shop Now!! </h1></div>
+     </div>
+    <div class="product-container">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <img src="mobile.jpeg" alt="Product 1">
+            <div class="product-name">Smartphone</div>
+            <div class="product-price">₹25,999</div>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <img src="headphone.jpeg.webp" alt="Product 2">
+            <div class="product-name">Wireless Headphones</div>
+            <div class="product-price">₹3,499</div>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <img src="laptop.jpg" alt="Product 3">
+            <div class="product-name">Laptop</div>
+            <div class="product-price">₹54,999</div>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <img src="smartwatch.png.avif" alt="Product 4">
+            <div class="product-name">Smartwatch</div>
+            <div class="product-price">₹5,999</div>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card">
+            <img src="mouse.webp" alt="Product 5">
+            <div class="product-name">Gaming Mouse</div>
+            <div class="product-price">₹1,999</div>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+<!--product 6-->
+        <div class="product-card">
+            <img src="shopping.jpeg" alt="Product 6">
+            <div class="product-name">Adidas football studs</div>
+            <div class="product-price">₹3999</div>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+    </div>
+
+</body>
+</html>
